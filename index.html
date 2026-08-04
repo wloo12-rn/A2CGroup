@@ -467,12 +467,14 @@ body {
 
 /* ===== SERVICES ===== */
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 3.5rem;
 }
 .service-card {
+  flex: 0 1 calc((100% - 3rem) / 3);
   background: var(--white);
   border: 1px solid var(--cream-dark);
   padding: 2.5rem 2rem;
@@ -876,7 +878,7 @@ body {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .services-grid { grid-template-columns: 1fr 1fr; }
+  .service-card { flex-basis: calc((100% - 1.5rem) / 2); }
   .diff-grid { grid-template-columns: 1fr 1fr; }
   .diff-item:nth-child(2) { border-right: none; }
   .diff-cards-grid { grid-template-columns: 1fr 1fr; }
@@ -901,7 +903,7 @@ body {
   .section { padding: 4rem 1.5rem; }
   .section-dark .section-inner,
   .section-cream .section-inner { padding: 4rem 1.5rem; }
-  .services-grid { grid-template-columns: 1fr; }
+  .service-card { flex-basis: 100%; }
   .model-visual { flex-direction: row; align-items: stretch; gap: 1rem; }
   .model-pathway { flex-direction: column; flex: 1 1 auto; max-width: none; }
   .model-stage::after { content: '↓'; right: 50%; transform: translateX(50%); top: auto; bottom: -0.8rem; }
