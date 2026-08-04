@@ -227,6 +227,10 @@ body {
   max-width: 1200px; margin: 0 auto;
   padding: 7rem 3rem;
 }
+/* Tighten the Model (dark) → What We Do (light) transition:
+   avoid stacking two full 7rem paddings into a large empty band. */
+#model .section-inner { padding-bottom: 4rem; }
+#services { padding-top: 4rem; }
 .section-label {
   font-size: 0.7rem; font-weight: 600;
   letter-spacing: 0.3em; text-transform: uppercase;
